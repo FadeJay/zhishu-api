@@ -1,5 +1,4 @@
 [
-
   {
     "id": "9dxs.com",
     "name": "久读小说|9dxs.com",
@@ -39,6 +38,7 @@
     "bookUpdateTime": "@.lastupdate@text:\\d*-\\d*-\\d*",
     "bookUpdateTimeFormat": null,
     "bookCategory": "@.sortname@text:(?<=\\[ ).+(?= \\])",
+    "bookLastChapterName": null,
     "bookFinished": null,
     "bookUrl": "@.articlename@href",
     "bookUrlFormat": null,
@@ -121,6 +121,7 @@
     "bookUpdateTime": "@td:nth-child(5)@",
     "bookUpdateTimeFormat": null,
     "bookCategory": null,
+    "bookLastChapterName": null,
     "bookFinished": "@td:nth-child(6) [text=已完成]@",
     "bookUrl": "@td:nth-child(1) a@href",
     "bookUrlFormat": null,
@@ -167,6 +168,94 @@
     "contentNextFormat": null,
     "contentRemove": null,
     "contentReplace": null
-  }
+  },
+  
+  {
+    "id": "meiguixs.com",
+    "name": "玫瑰小说网|meiguixs.com",
+    "description": null,
+    "tips": "两次搜索的间隔时间不得少于 30 秒; 搜索关键字必须大于4个字符",
+    "original": false,
+    "version": 1,
+    "rating": 10,
+    "author": "sososdk",
+    "authorHomePage": "https://sososdk.github.io/zhishu",
 
+    "searchUrl": "https://www.meiguixs.com/modules/article/search.php",
+    "javascriptSearch": false,
+    "javascriptSearchDelay": null,
+    "searchKeyEncoding": "gbk",
+    "searchPostParams": "searchkey=%s&searchtype=articlename",
+    "searchUserAgent": null,
+
+    "booksCharacteristic": null,
+    "detailCharacteristic": ".newrap a",
+    "chaptersCharacteristic": null,
+    "searchNext": "@.next@href",
+    "searchNextFormat": null,
+
+    "books": "#nr",
+    "bookName": "@.odd a@",
+    "bookAuthor": "@td:nth-child(3)@",
+    "bookWords": null,
+    "bookIcon": null,
+    "bookIconFormat": [
+      "https://image.meiguixs.com/%s/%s/%ss.jpg",
+      "@.even a@href:(?<=/)\\d+(?=/\\d+/)",
+      "@.even a@href:(?<=/\\d+/)\\d+(?=/)",
+      "@.even a@href:(?<=/\\d+/)\\d+(?=/)"
+    ],
+    "bookDesc": null,
+    "bookUpdateTime": "@td:nth-child(5)@",
+    "bookUpdateTimeFormat": null,
+    "bookCategory": "@.sortname@text:(?<=\\[ ).+(?= \\])",
+    "bookLastChapterName": "@td:nth-child(2)@",
+    "bookFinished": null,
+    "bookUrl": "@.odd a@href",
+    "bookUrlFormat": null,
+
+    "userAgent": null,
+    "javascript": false,
+    "javascriptDelay": null,
+
+    "detailBookName": "@.bookright h1@",
+    "detailBookAuthor": "@#author a@",
+    "detailBookLastChapterName": "@.bookright h1@",
+    "detailBookWords": null,
+    "detailBookIcon": "@#bookimg img@src",
+    "detailBookIconFormat": null,
+    "detailBookDesc": "@#bookintro@",
+    "detailBookUpdateTime": "@.new_t@:(?<=最后更新: ).*",
+    "detailBookUpdateTimeFormat": null,
+    "detailBookCategory": "@pd_r@",
+    "detailBookFinished": null,
+    "detailBookUrl": "@.newrap a@href",
+    "detailBookUrlFormat": null,
+
+    "chaptersBookName": null,
+    "chaptersBookAuthor": null,
+    "chaptersBookWords": null,
+    "chaptersBookIcon": null,
+    "chaptersBookIconFormat": null,
+    "chaptersBookDesc": null,
+    "chaptersBookUpdateTime": null,
+    "chaptersBookUpdateTimeFormat": null,
+    "chaptersBookCategory": null,
+    "chaptersBookFinished": null,
+    "chaptersNext": null,
+    "chaptersNextFormat": null,
+    "chapters": "#readerlist ul li:nth-child(n+1)",
+    "chapterName": "@a@",
+    "chapterUrl": "@a@href",
+    "chapterUrlFormat": null,
+    "chaptersReverse": false,
+
+    "javascriptContent": false,
+    "javascriptContentDelay": null,
+    "content": "#content",
+    "contentNext": null,
+    "contentNextFormat": null,
+    "contentRemove": null,
+    "contentReplace": [{"reg": true, "html": false, "first": "感谢阅读.*?com", "second": ""}]
+  }
 ]
