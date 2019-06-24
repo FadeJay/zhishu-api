@@ -166,7 +166,7 @@
     "content": "#htmlContent",
     "contentNext": "@#linkNext [text=下一页]@href",
     "contentNextFormat": null,
-    "contentRemove": ["p"],
+    "contentRemove": null,
     "contentReplace": [{"reg": true, "html": false, "first": "小说书库.*?最新章节！", "second": ""}]
   },
   
