@@ -374,7 +374,7 @@
 
     "books": ".bookbox",
     "bookName": "@.bookname a@",
-    "bookAuthor": "@.author@:(?<=作者: ).*",
+    "bookAuthor": "@.author@:(?<=作者：).*",
     "bookWords": null,
     "bookIcon": "@.bookimg a img@src",
     "bookIconFormat": null,
@@ -392,7 +392,7 @@
     "javascriptDelay": null,
 
     "detailBookName": "@.blue_bg a@",
-    "detailBookAuthor": "@.novel_msg li@:(?<=作者: ).*",
+    "detailBookAuthor": "@.novel_msg li@:(?<=作者：).*",
     "detailBookLastChapterName": "@#vip a@",
     "detailBookWords": null,
     "detailBookIcon": "@.novel_img img@src",
